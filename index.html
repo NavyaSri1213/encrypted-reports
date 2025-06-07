@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypted Reports Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encrypted Reports Data</h1>
+    <p>Below is the list of available CSV files:</p>
+    <ul>
+        <li><a href="users.csv">users.csv</a></li>
+        <li><a href="dGhpcy1pcy1hbi1lbmNyeXB0ZWQtcm9sbA==.csv">dGhpcy1pcy1hbi1lbmNyeXB0ZWQtcm9sbA==.csv</a></li>
+        <li><a href="aG93LWNhbi1pLWhlbHAteW91LXRvZGF5.csv">aG93LWNhbi1pLWhlbHAteW91LXRvZGF5.csv</a></li>
+        <li><a href="c29tZS1lbmNyeXB0ZWQtcm9sbC1udW1iZXI=.csv">c29tZS1lbmNyeXB0ZWQtcm9sbC1udW1iZXI=.csv</a></li>
+        <!-- Add more links for other CSV files as needed -->
+        <li><a href="c3R1ZGVudC1lbmNyeXB0aW9uLTUw.csv">c3R1ZGVudC1lbmNyeXB0aW9uLTUw.csv</a></li>
+    </ul>
+
+    <!-- PageCrypt Script for Password Protection -->
+    <script src="https://cdn.jsdelivr.net/npm/pagecrypt@6.0.0/dist/pagecrypt.min.js"></script>
+    <script>
+        // Password for decryption (set to 's3cr3t')
+        const password = "s3cr3t";
+        
+        // Encrypt the page content on load if accessed directly
+        if (!window.location.hash) {
+            PageCrypt.encrypt(password);
+        }
+    </script>
+</body>
+</html>
